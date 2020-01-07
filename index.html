@@ -48,9 +48,7 @@
                     </li>
                     <li class="navigation__item">
                         <div class="hamburger js-hamburger">
-                            <span class="hamburger-line hamburger-line--1"></span>
-                            <span class="hamburger-line hamburger-line--2"></span>
-                            <span class="hamburger-line hamburger-line--3"></span>
+                            &#9776;
                         </div>
                     </li>
                 </ul>
@@ -579,7 +577,7 @@
                 skupiamy się tylko na paru dziedzinach.
             </p>
         </div>
-        <form action="action_page.php" class="contact-form">
+        <form action="send_form_email.php" method="post" class="contact-form">
 
             <div class="contact-option">
                 <label for="fname" class="contact-option__label">Imię <span class="important">*</span></label>
@@ -596,7 +594,7 @@
             <div class="contact-option">
                 <label for="phone" class="contact-option__label">Numer telefonu <span class="important">*</span></label>
                 <div class="holder">
-                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                    <input type="tel" id="phone" name="phone" required>
                 </div>
             </div>
             <div class="contact-option">
@@ -612,7 +610,7 @@
                 Kosiński Group, ul. Piotrowskiego 4/29, 10-692 Olsztyn, NIP: 7393537805, zgodnie z polityką
                 prywatności.</div>
 
-            <button class="btn-primary btn c-btn--light o-contact-btn">Wyślij</button>
+            <input type="submit" class="btn-primary btn c-btn--light o-contact-btn" value="Wyślij">
 
             <div class="information"><span class="important">*</span> - pola wymagane</div>
             <div class="decoration-circle"></div>
