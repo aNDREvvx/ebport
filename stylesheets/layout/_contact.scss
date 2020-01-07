@@ -1,0 +1,141 @@
+.section-contact {
+    grid-column: center-start / center-end;
+
+    display: grid;
+    grid-template-columns: [center-start] repeat(12,
+            [col-start] minmax(min-content, 9.9rem) [col-end]) [center-end];
+    grid-column-gap: 1.6rem;
+}
+
+.contact-form {
+    grid-column: center-start / center-end;
+    padding: 0 15%;
+    display: flex;
+    flex-direction: column;
+    margin: 15rem 0;
+    position: relative;
+
+
+}
+
+.contact-option {
+    display: flex;
+
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+    }
+
+    &__label {
+        text-align: right;
+        width: 16rem;
+        margin-right: 1rem;
+        margin-top: 2.05rem;
+        display: block;
+        font-size: 1.8rem;
+
+        @media screen and (max-width: 800px) {
+            text-align: left;
+            width: 100%;
+        }
+    }
+
+    .holder {
+        flex: 1;
+        position: relative;
+
+        input,
+        textarea {
+            border: 1px solid var(--c-dark-gray--1);
+            width: 100%;
+            font-family: 'Asap',
+                sans-serif;
+        }
+
+        input {
+            height: 6rem;
+            padding-left: 2rem;
+            font-size: 1.6rem;
+            color: var(--c-light-red);
+            letter-spacing: 1px;
+            background-color: transparent;
+        }
+
+        .placeholder {
+            color: var(--color-placeholder);
+            display: flex;
+            align-items: center;
+
+            span {
+                width: 2px;
+                margin-left: 1rem;
+                height: 4rem;
+                background-color: red;
+                display: inline-block;
+            }
+        }
+
+        input+.placeholder {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+        }
+
+        textarea {
+            height: 30rem;
+            padding-top: 2.05rem;
+            padding-left: 2rem;
+            font-size: 1.6rem;
+            color: var(--c-light-red);
+            letter-spacing: 1px;
+        }
+
+        textarea+.placeholder {
+            position: absolute;
+            top: 2.05rem;
+            left: 20px;
+        }
+
+    }
+}
+
+.privacy {
+    margin-left: 17rem;
+    font-size: 1.4rem;
+    color: var(--c-dark-gray--1);
+
+    @media screen and (max-width: 800px) {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+.information {
+    position: absolute;
+    top: 0;
+    right: 15%;
+    transform: translateY(-160%);
+    color: var(--color-dark);
+
+    @media screen and (max-width: 800px) {
+        top: 3%;
+        right: 14%;
+    }
+}
+
+.important {
+    color: var(--c-light-red);
+}
+
+.o-contact-btn {
+    font-family: "Asap",
+        sans-serif;
+    font-size: 1.6rem;
+    border: none;
+    margin: 5rem auto 0;
+    cursor: pointer;
+}

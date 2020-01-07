@@ -1,0 +1,46 @@
+    .buttons__box {
+        display: flex;
+        margin-top: 3rem;
+
+        .btn {
+            &:not(:last-child) {
+                margin-right: 3.5rem;
+            }
+        }
+    }
+
+    .logo__img {
+        width: 100%;
+    }
+
+    .section__heading--left {
+        grid-column: center-start / col-end 6;
+
+        @media screen and (max-width: 550px) {
+            grid-column: center-start / col-end 8;
+        }
+    }
+
+    .section__heading--right {
+        grid-column: col-start 7 / center-end;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-left: 2rem;
+        padding-bottom: 3rem;
+
+        @media screen and (max-width: 550px) {
+            grid-column: col-start 9 / center-end;
+        }
+    }
+
+    .section__text {
+        width: 75%;
+        font-size: 1.6rem;
+
+        @media screen and (max-width: 700px) {
+            display: none;
+            width: 0;
+        }
+    }

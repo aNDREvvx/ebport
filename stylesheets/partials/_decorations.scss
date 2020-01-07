@@ -1,0 +1,115 @@
+.mask {
+    width: 100%;
+    grid-column: 1 / -1;
+
+    &--bottom {
+        transform: translateY(100%) rotate(180deg);
+        bottom: 1px;
+        left: -5px;
+    }
+
+    &--top {
+        top: 0;
+        transform: translateY(-100%);
+    }
+
+    img {
+        position: absolute;
+        width: 101%;
+        user-select: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    }
+}
+
+.decoration {
+    &-corner {
+        position: absolute;
+        top: 0.5rem;
+        left: 5.5rem;
+        background-color: var(--c-light-red);
+        width: 18.5rem;
+        height: 1.2rem;
+
+        @media screen and (max-width: 800px) {
+            width: 13.5rem;
+            left: 2.5rem;
+            height: 0.8rem;
+        }
+
+        @media screen and (max-width: 700px) {
+            top: 1.4rem;
+            left: 0rem;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 1.2rem;
+            height: 10rem;
+            background-color: var(--c-light-red);
+
+            @media screen and (max-width: 800px) {
+                width: 0.8rem;
+                height: 7rem;
+            }
+        }
+    }
+
+    &-line {
+        width: 12.5rem;
+        height: 2px;
+        background-color: var(--c-light-red);
+        margin-top: 2rem;
+    }
+
+    &-line--small {
+        width: 8rem;
+        height: 2px;
+        background-color: var(--c-light-red);
+        margin-top: 2rem;
+    }
+
+    &-trapezoid {
+        border-bottom: 100px solid var(--c-light-red);
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        height: 0;
+        width: 100px;
+        position: absolute;
+        top: 65%;
+        transform: translateX(-50%) rotate(90deg);
+
+        @media screen and (max-width: 550px) {
+            display: none;
+        }
+    }
+
+    &-triangle {
+        width: 0;
+        height: 0;
+        border-top: 50px solid transparent;
+        border-left: 100px solid var(--c-light-red);
+        border-bottom: 50px solid transparent;
+        position: absolute;
+        top: 10%;
+        right: 0;
+        transform: translateX(50%) rotate(90deg);
+    }
+
+    &-circle {
+        position: absolute;
+        top: 0;
+        right: 15%;
+        transform: translate(35%, -60%);
+        width: 18rem;
+        height: 18rem;
+        background-color: var(--c-light-red);
+        z-index: -1;
+        border-radius: 50%;
+    }
+}

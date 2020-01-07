@@ -1,0 +1,69 @@
+.btn {
+
+    &:link,
+    &:visited {
+        text-decoration: none;
+    }
+
+    padding: 1.5rem 3rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*     @media screen and (max-width: 810px) {
+        padding: 1rem 1rem;
+    } */
+
+    &-primary {
+        width: 14.5rem;
+        background-color: var(--c-light-red);
+        position: relative;
+
+        /*         @media screen and (max-width: 810px) {
+            width: 11.5rem;
+        } */
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 15.5rem;
+            height: 100%;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            background-color: var(--c-dark-red);
+
+            /*             @media screen and (max-width: 810px) {
+                width: 12.5rem;
+            } */
+        }
+    }
+
+    &-secondary {
+        width: 15.46rem;
+        border: 2px solid var(--c-light-red);
+
+        /*         @media screen and (max-width: 810px) {
+            width: 12.46rem;
+        } */
+    }
+
+    &-tertiary {
+        background-color: var(--c-light-red);
+        width: 14.5rem;
+
+        /*         @media screen and (max-width: 810px) {
+            width: 9.5rem;
+        } */
+    }
+
+}
+
+.c-btn--light {
+    color: var(--c-light-gray--4);
+}
+
+.c-btn--dark {
+    color: var(--c-black);
+}
